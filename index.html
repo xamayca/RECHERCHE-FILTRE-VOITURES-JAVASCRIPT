@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>TP JAVASCRIPT VEHICLES</title>
+</head>
+
+<body class="bg-body">
+
+    <header class="d-flex flex-col items-center justify-around bg-dark gap-1 p-2 mb-2">
+        <h1 class="txt-white fs-1">TP JAVASCRIPT VEHICLES</h1>
+        <input id="search" type="search" name="searchbar" placeholder="Rechercher un véhicule..." class="p-1 w-100">
+
+        <div class="d-flex justify-around w-75">
+
+            <button id="renaultBtn" type="submit"
+                class="btn-success border-none txt-white fw-bold p-05 w-30">Renault</button>
+
+            <button id="peugeotBtn" type="submit"
+                class="btn-success border-none txt-white fw-bold p-05 w-30">Peugeot</button>
+
+            <button id="citroenBtn" type="submit"
+                class="btn-success border-none txt-white fw-bold p-05 w-30">Citroen</button>
+        </div>
+
+        <button id="clear" type="submit" class="btn-error border-none txt-white fw-bold p-05 w-30">Clear</button>
+
+    </header>
+
+    <main id="carList" class="d-flex flex-col m-auto w-90 gap-1">
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
