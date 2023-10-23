@@ -48,7 +48,7 @@ const displayCars = (filter) => {
 
 	for (let i = 0; i < vehicles.length; i++) {
 
-		if (vehicles[i].brand.includes(filter) || filter == undefined || filter == '') {
+		if (vehicles[i].brand.includes(filter) || vehicles[i].model.includes(filter) || filter == undefined || filter == '') {
 			console.log(vehicles[i].brand);
 			console.log(vehicles[i].model);
 
@@ -78,21 +78,13 @@ const citroenBrandBtn = document.getElementById('citroenBtn');
 const clearBtn = document.getElementById('clear');
 const searchBar = document.getElementById('search');
 
-renaultBrandBtn.addEventListener('click', function () {
-	displayCars("Renault");
-});
+renaultBrandBtn.addEventListener('click', () => displayCars("Renault"));
 
-peugeotBrandBtn.addEventListener('click', function () {
-	displayCars("Peugeot");
-});
+peugeotBrandBtn.addEventListener('click', () => displayCars("Peugeot"));
 
-citroenBrandBtn.addEventListener('click', function () {
-	displayCars("Citroen");
-});
+citroenBrandBtn.addEventListener('click', () => displayCars("Citroen"));
 
-clearBtn.addEventListener('click', function () {
-	displayCars();
-});
+clearBtn.addEventListener('click', () => displayCars());
 
 
 searchBar.addEventListener("input", event => {
@@ -100,6 +92,7 @@ searchBar.addEventListener("input", event => {
 		const firstLetter = event.target.value[0].toUpperCase();
 		const restSearch = event.target.value.slice(1).toLowerCase();
 		event.target.value = firstLetter + restSearch;
+
 	}
 
 	displayCars(event.target.value);
